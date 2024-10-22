@@ -1,3 +1,4 @@
+let backgroundAudio = null;
 function isTransparent(pixelData) {
     return pixelData[3] === 0;
 }
@@ -144,6 +145,9 @@ function checkTransparency(image) {
         }
 
         function startGame() {
+            console.log('Game startedd');
+            backgroundAudio = new Audio('media/sounds/background.mp3');
+            backgroundAudio.play();
             selectCarColor();
             document.getElementById('start').style.display = 'none';
             document.getElementById('game').style.display = 'flex';
@@ -209,6 +213,7 @@ function checkTransparency(image) {
                     if (hearts <= 0) {
                         loadedImages = -1;
                         cancelAnimationFrame(animate);
+                        backgroundAudio.pause();
                         alert("Je bent af!\nStatistieken:\n========\nScore: " + parseInt(playerScore) +
                             "\nAuto's gepasseerd: " + carsPassed);
                     }
