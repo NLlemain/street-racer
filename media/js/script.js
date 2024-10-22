@@ -214,8 +214,7 @@ function checkTransparency(image) {
                         loadedImages = -1;
                         cancelAnimationFrame(animate);
                         backgroundAudio.pause();
-                        alert("Je bent af!\nStatistieken:\n========\nScore: " + parseInt(playerScore) +
-                            "\nAuto's gepasseerd: " + carsPassed);
+                        window.location.href = "youlost.html";
                     }
                 }
             }
