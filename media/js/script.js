@@ -80,8 +80,8 @@ var cooldown = false;
 var hearts = 3;
 var lastHeartScore = 0;
 
-var maxSpeed = 15;
-var maxSpeed_2 = 20;
+var maxSpeed = 12;
+var maxSpeed_2 = 18;
 
 for (var i = 0; i < carCount; i++) {
     obstacles.push(new Obstacles(i));
@@ -89,8 +89,8 @@ for (var i = 0; i < carCount; i++) {
 
 // New variables for invulnerability and speed management
 var isInvulnerable = false;
-var invulnerabilityDuration = 2500; // 2.5 seconds
-var speedRecoveryDuration = 2000; // 2 seconds for full recovery
+var invulnerabilityDuration = 3500; // 3.5 seconds
+var speedRecoveryDuration = 2500; // 2.5 seconds for full recovery
 var originalSpeed = 4; // Base speed
 var speed = originalSpeed;
 var recoveryStartTime = null;
@@ -181,7 +181,7 @@ function update() {
             };
         }
 
-        if (Math.floor(playerScore) % 200 === 0 && Math.floor(playerScore) !== lastHeartScore && hearts < 3) {
+        if (Math.floor(playerScore) % 200 === 0 && Math.floor(playerScore) !== lastHeartScore && hearts < 5) {
             hearts++;
             lastHeartScore = Math.floor(playerScore);
             newHP();
