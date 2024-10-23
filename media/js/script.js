@@ -82,6 +82,8 @@ var lastHeartScore = 0;
 
 var maxSpeed = 12;
 var maxSpeed_2 = 15;
+var maxSpeed_3 = 18;
+
 
 for (var i = 0; i < carCount; i++) {
     obstacles.push(new Obstacles(i));
@@ -193,6 +195,10 @@ function update() {
             obsSpeed += 0.05;
         }
         if (playerScore > 200 && dbgy < maxSpeed_2) {
+            dbgy += 0.05;
+            obsSpeed += 0.05;
+        }
+                if (playerScore > 350 && dbgy < maxSpeed_3) {
             dbgy += 0.05;
             obsSpeed += 0.05;
         }
