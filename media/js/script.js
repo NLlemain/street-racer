@@ -80,9 +80,9 @@ var cooldown = false;
 var hearts = 3;
 var lastHeartScore = 0;
 
-var maxSpeed = 12;
-var maxSpeed_2 = 15;
-var maxSpeed_3 = 18;
+var maxSpeed = 15;
+var maxSpeed_2 = 18;
+var maxSpeed_3 = 21;
 
 
 for (var i = 0; i < carCount; i++) {
