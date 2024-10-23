@@ -11,7 +11,7 @@ body {
 }
 
 .containerStart {
-    background-image: url(../img/road2.png);
+    background-image: url(../img/road1.png);
     width: 208vh;
     background-size: cover;
     background-position: center;
@@ -86,6 +86,20 @@ h1 {
 
 .button-settings { 
     background-color: #2196F3; 
+}
+#loadingScreen {
+    display: none; /* Initially hidden */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
 .button-settings:hover { 
