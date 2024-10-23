@@ -81,7 +81,7 @@ var hearts = 3;
 var lastHeartScore = 0;
 
 var maxSpeed = 12;
-var maxSpeed_2 = 18;
+var maxSpeed_2 = 15;
 
 for (var i = 0; i < carCount; i++) {
     obstacles.push(new Obstacles(i));
@@ -181,7 +181,7 @@ function update() {
             };
         }
 
-        if (Math.floor(playerScore) % 500 === 0 && Math.floor(playerScore) !== lastHeartScore && hearts < 5) {
+        if (Math.floor(playerScore) % 400 === 0 && Math.floor(playerScore) !== lastHeartScore && hearts < 5) {
             hearts++;
             lastHeartScore = Math.floor(playerScore);
             newHP();
@@ -192,7 +192,7 @@ function update() {
             dbgy += 0.05;
             obsSpeed += 0.05;
         }
-        if (playerScore > 350 && dbgy < maxSpeed_2) {
+        if (playerScore > 200 && dbgy < maxSpeed_2) {
             dbgy += 0.05;
             obsSpeed += 0.05;
         }
