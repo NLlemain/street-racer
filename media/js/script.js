@@ -81,7 +81,7 @@ var hearts = 3;
 var lastHeartScore = 0;
 
 var maxSpeed = 20;
-var maxSpeed_2 = 30;
+var maxSpeed_2 = 25;
 
 for (var i = 0; i < carCount; i++) {
     obstacles.push(new Obstacles(i));
