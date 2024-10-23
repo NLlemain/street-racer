@@ -80,8 +80,8 @@ var cooldown = false;
 var hearts = 3;
 var lastHeartScore = 0;
 
-var maxSpeed = 20;
-var maxSpeed_2 = 25;
+var maxSpeed = 15;
+var maxSpeed_2 = 20;
 
 for (var i = 0; i < carCount; i++) {
     obstacles.push(new Obstacles(i));
