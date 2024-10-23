@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Streetracers</title>
+    <link rel="stylesheet" href="media/css/style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+    <section id="start">
+        <div class="containerStart">
+            <div class="menu">
+                <h1>Streetracers</h1>
+                <div class="button-container">
+                    <button class="button button-play" id="homeButton">Home</button>
+                </div>
+                <div class="volume-container">
+                    <label for="volume">Volume: </label>
+                    <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="media/js/script.js"></script>
+    <script>
+        const volumeSlider = document.getElementById('volume');
+        const homeButton = document.getElementById('homeButton');
+
+        const savedVolume = localStorage.getItem('gameVolume');
+        if (savedVolume) {
+            volumeSlider.value = savedVolume;
+            setVolume(savedVolume);
+        }
+
+        volumeSlider.addEventListener('input', (event) => {
+            const volume = event.target.value;
+            setVolume(volume);
+            localStorage.setItem('gameVolume', volume);
+        });
+
+        function setVolume(volume) {
+
+            console.log(`Volume set to: ${volume}`);
+        }
+
+        // Event listener for home button
+        homeButton.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
