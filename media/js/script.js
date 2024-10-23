@@ -235,9 +235,10 @@ function update() {
                 if (!isInvulnerable) {
                     activateInvulnerability();
                 }
+                // Change cooldown duration to 1000 milliseconds (1 seconds)
                 setTimeout(() => {
                     cooldown = false;
-                }, 2000);
+                }, 1000); // Updated cooldown duration
             }
             if (hearts <= 0) { // If hearts = 0, game ends and redirect
                 loadedImages = -1;
