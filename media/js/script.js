@@ -181,7 +181,7 @@ function update() {
             };
         }
 
-        if (Math.floor(playerScore) % 400 === 0 && Math.floor(playerScore) !== lastHeartScore && hearts < 5) {
+        if (Math.floor(playerScore) % 200 === 0 && Math.floor(playerScore) !== lastHeartScore && hearts < 5) {
             hearts++;
             lastHeartScore = Math.floor(playerScore);
             newHP();
