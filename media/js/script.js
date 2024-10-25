@@ -80,9 +80,8 @@ var cooldown = false;
 var hearts = 3;
 var lastHeartScore = 0;
 
-var maxSpeed = 18;
-var maxSpeed_2 = 20;
-var maxSpeed_3 = 22;
+var maxSpeed = 16;
+var maxSpeed_2 = 18;
 
 
 for (var i = 0; i < carCount; i++) {
@@ -195,10 +194,6 @@ function update() {
             obsSpeed += 0.05;
         }
         if (playerScore > 200 && dbgy < maxSpeed_2) {
-            dbgy += 0.05;
-            obsSpeed += 0.05;
-        }
-                if (playerScore > 350 && dbgy < maxSpeed_3) {
             dbgy += 0.05;
             obsSpeed += 0.05;
         }
