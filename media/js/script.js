@@ -80,9 +80,9 @@ var cooldown = false;
 var hearts = 3;
 var lastHeartScore = 0;
 
-var maxSpeed = 20;
-var maxSpeed_2 = 25;
-var maxSpeed_3 = 30;
+var maxSpeed = 18;
+var maxSpeed_2 = 20;
+var maxSpeed_3 = 22;
 
 
 for (var i = 0; i < carCount; i++) {
@@ -183,7 +183,7 @@ function update() {
             };
         }
 
-        if (Math.floor(playerScore) % 200 === 0 && Math.floor(playerScore) !== lastHeartScore && hearts < 3) {
+        if (Math.floor(playerScore) % 450 === 0 && Math.floor(playerScore) !== lastHeartScore && hearts < 3) {
             hearts++;
             lastHeartScore = Math.floor(playerScore);
             newHP();
